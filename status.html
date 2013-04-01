@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Welcome!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Sanskriti Jain">
+	<!-- Le styles -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/chosen.css" rel="stylesheet">
+	<link href="assets/css/common.css" rel="stylesheet">
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<!-- Le fav and touch icons -->
+</head>
+
+<body>
+	<!-- NAVIGATION BAR -->
+	<div class="navbar navbar-inverse nav">
+	    <div class="navbar-inner">
+	        <div class="container">
+	            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	            </a>
+	            <a class="brand" href="#">DA-IICT</a>
+				
+	          	<div class="nav-collapse collapse">
+	              	<ul class="nav">
+	                  	<li class="divider-vertical"></li>
+	                	<li><a href="#"><i class="icon-home icon-white"></i> Home</a></li>
+	              	</ul>
+	              	<div class="pull-right">
+	                	<ul class="nav pull-right">
+	                    	<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome, User <b class="caret"></b></a>
+	                        	<ul class="dropdown-menu">
+	                            	<li><a href="/user/preferences"><i class="icon-cog"></i> Preferences</a></li>
+	                            	<li><a href="/help/support"><i class="icon-envelope"></i> Contact Support</a></li>
+	                            	<li class="divider"></li>
+	                            	<li><a href="/auth/logout"><i class="icon-off"></i> Logout</a></li>
+	                        	</ul>
+	                    	</li>
+	                	</ul>
+	              </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+	<!-- BODY CONTAINER -->
+	<div class="container">
+		<div class="row">
+    		<!--Sidebar content-->
+    		<div class="span3">
+    			<div class="well sidebar-nav">
+
+    				<a href="#" class="thumbnail" style="margin-bottom:19px;">  
+      					<img src="assets/img/daiict.jpg" alt="js tutorial" width="100%" >  
+    				</a> 
+
+
+    			    <ul class="nav nav-list">  
+	    			    <li><a href="#">Home</a></li>  
+	    			    <li><a href="#">Profile</a></li>  
+	    			    <li><a href="#">Webmail</a></li>
+                        <li><a href="#">Filtration</a></li> 
+    			    </ul>  
+    			</div>	
+    		</div>
+
+    		<!--Body content-->
+    		<div class="span9">
+		  		<div class="company_selector"></div>
+		  		<br/>
+		  		<div class="student_multiple_selector"></div>
+    		</div>
+  		</div>
+	</div>
+
+<!-- Le javascript
+================================================== -->
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/chosen.jquery.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+  		$html = '<select name="company" id="company" size="1" class="chosenElement">';
+		//GET ALL COMPANIES INTO THIS ARRAY
+  		var companies = ['Amazon','Deloitte','TCS','Infosys'];
+  		for(var i=0; i<companies.length; i++) {
+  			$html += '<option value="foo">'+companies[i]+'</option>';
+  		}
+  		$('.company_selector').html($html);
+  		$('#company').chosen();
+
+  		$html2 = '<select name="selected_students" id="students" multiple="multiple" size="1" class="chosenElement">';
+		//GET ALL REGISTERED STUDENTS INTO THIS ARRAY
+  		var registered_students = ['201001001','201001002','201001003','201001004'];
+  		
+  		for(var j=0; j<registered_students.length; j++) {
+  			$html2 += '<option value="foo">'+registered_students[j]+'</option>';
+  		}
+  		$('.student_multiple_selector').html($html2);
+  		$('#students').chosen();
+
+
+
+	});
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
+            
