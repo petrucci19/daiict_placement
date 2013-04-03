@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Login to DAIICT SPC!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Le styles -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/css/common.css" rel="stylesheet">
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<!-- Le fav and touch icons -->
+</head>
+
+<body class="login_body">
+
+	<!-- BODY CONTAINER -->
+	<div class="container">
+		<div id="login_box">
+			<h3>Login</h3>
+			<form>
+				<table>
+					<tr>
+						<td>Username:</td>
+						<td>
+							<input required type="text" name="ID" placeholder="Enter your ID" id="idno" pattern="[+]?[0-9]{9,9}" title="Student ID must contain exact 9 digits">
+						</td>
+					</tr>
+					<tr>
+						<td>Password</td>
+						<td>
+							<input id="password" name="password" placeholder="Enter your password" type="password" pattern=".{5,}" title="Minmimum 5 letters or numbers." required>
+						</td>
+					</tr>
+				</table>
+				<br />
+				<input type="submit" class="btn btn-success">
+				<a href="studentReg.html" class="btn btn-primary" style="margin-left:20px">Register</a>
+			</form>
+		</div>	    	
+	</div>
+
+<!-- Le javascript
+================================================== -->
+</body>
+</html>
+            

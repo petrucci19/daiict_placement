@@ -54,25 +54,32 @@
 	<div class="container">
 		<div class="row-fluid">
     		<!--Sidebar content-->
-    		<div class="span3">
-    			<div class="well sidebar-nav">
+    		<div class="span3 sidebar-box">
+                <div class="well sidebar-nav custom-well">
+                    <img src="assets/img/daiict.jpg" class="img-rounded sidebar-img" >
 
-    				<img src="assets/img/daiict.jpg" class="img-rounded sidebar-img" >
-
-    			    <ul class="nav nav-list">  
-	    			    <li><a href="index.html">Home</a></li>  
-	    			    <li><a href="profile.html">Profile</a></li>  
-	    			    <li><a href="http://webmail.daiict.ac.in">Webmail</a></li>
-                        <li><a href="filtration.html">Filtration</a></li> 
-    			    </ul>   
-    			</div>	
-    		</div>
+                    <ul class="nav nav-list">  
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="listevents.html">Events</a></li>  
+                        <li><a href="profile.html">Profile</a></li>  
+                        <li><a href="http://webmail.daiict.ac.in">Webmail</a></li>
+                    </ul>
+                    <h4 class="nav-custom-header">Administration</h4>
+                    <ul class="nav nav-list">  
+                        <li><a href="eventgeneration.html">Add Event</a></li>
+                        <li><a href="filtration.html">Filtration</a></li>    
+                        <li  class="active"><a href="status.html">Status Update</a></li>                  
+                    </ul>
+                </div>  
+            </div>
 
     		<!--Body content-->
-    		<div class="span9">
-		  		<div class="company_selector"></div>
-		  		<br/>
-		  		<div class="student_multiple_selector"></div>
+    		<div class="span9 panel-box">
+    			<h2>Update Placement Status</h2>
+		  		<div class="row-fluid">
+		  			<div class="span5 company_selector"></div>		
+		  			<div class="span5 student_multiple_selector"></div>
+		  		</div>
     		</div>
   		</div>
 	</div>

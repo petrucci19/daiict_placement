@@ -1,14 +1,16 @@
 body {
-	background: #eee;
+	background: #e4e6e5;
 }
 
 
 .panel-box {
 	background: #fff;
-	#border: 1px solid #ccc;
-	#border-radius: 8px;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 8px;
 	padding-bottom: 15px;
-	#padding-left: 20px;
+	padding-left: 30px;
+	padding-right: 15px;
 	margin-bottom: 20px;
 }
 
@@ -19,7 +21,73 @@ body {
 	margin-bottom: 20px;
 }
 
+.sidebar-box {
+	background: #fff;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+}
+
+.nav-custom-header {
+	color: #bbb;
+	text-decoration: underline;
+	margin-left: 10px;
+}
+
+.custom-well {
+	border: none;
+	background: none;
+}
+
+.header-gap {
+	margin-top: 30px;
+}
+
 .center {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.question-box {
+	padding-top: 20px;
+	background: #eee;
+	border: 1px solid #ccc;
+	padding-left: 15px;
+	margin-top: 20px;
+	border-radius: 8px;
+}
+
+#login_box {
+	width:300px;
+	height: 180px;
+	padding: 30px;
+	padding-top: 25px;
+	#background: #454545;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 180px;
+	#color: #f5f5f5;
+	background-image: linear-gradient(bottom, rgb(163,163,163) 13%, rgb(240,240,240) 61%, rgb(224,224,224) 78%);
+	background-image: -o-linear-gradient(bottom, rgb(163,163,163) 13%, rgb(240,240,240) 61%, rgb(224,224,224) 78%);
+	background-image: -moz-linear-gradient(bottom, rgb(163,163,163) 13%, rgb(240,240,240) 61%, rgb(224,224,224) 78%);
+	background-image: -webkit-linear-gradient(bottom, rgb(163,163,163) 13%, rgb(240,240,240) 61%, rgb(224,224,224) 78%);
+	background-image: -ms-linear-gradient(bottom, rgb(163,163,163) 13%, rgb(240,240,240) 61%, rgb(224,224,224) 78%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.13, rgb(163,163,163)),
+		color-stop(0.61, rgb(240,240,240)),
+		color-stop(0.78, rgb(224,224,224))
+	);
+	border: 1px solid #bbb;
+	border-radius: 8px;
+	-webkit-box-shadow: 3px 3px 25px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    3px 3px 25px rgba(50, 50, 50, 0.75);
+	box-shadow:         3px 3px 25px rgba(50, 50, 50, 0.75);
+}
+
+.login_body {
+	background: #1399bd;
 }

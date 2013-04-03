@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Filteration</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- We don't need author field -->
+	<!-- Le styles -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/css/common.css" rel="stylesheet">
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<!-- Le fav and touch icons -->
+</head>
+
+<body>
+	<!-- NAVIGATION BAR -->
+	<div class="navbar navbar-inverse nav">
+	    <div class="navbar-inner">
+	        <div class="container">
+	            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	            </a>
+	            <a class="brand" href="#">DA-IICT</a>
+				
+	          	<div class="nav-collapse collapse">
+	              	<ul class="nav">
+	                  	<li class="divider-vertical"></li>
+	                	<li><a href="index.html"><i class="icon-home icon-white"></i> Home</a></li>
+	              	</ul>
+	              	<div class="pull-right">
+	                	<ul class="nav pull-right">
+	                    	<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome, User <b class="caret"></b></a>
+	                        	<ul class="dropdown-menu">
+	                            	<li><a href="/user/preferences"><i class="icon-cog"></i> Preferences</a></li>
+	                            	<li><a href="/help/support"><i class="icon-envelope"></i> Contact Support</a></li>
+	                            	<li class="divider"></li>
+	                            	<li><a href="/auth/logout"><i class="icon-off"></i> Logout</a></li>
+	                        	</ul>
+	                    	</li>
+	                	</ul>
+	              </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+	<!-- BODY CONTAINER -->
+	<div class="container">
+  		<div class="row-fluid">
+    		<!--Sidebar content-->
+    		<div class="span3">
+    			<div class="well sidebar-nav">
+
+    				<img src="assets/img/daiict.jpg" class="img-rounded sidebar-img" >
+
+    			    <ul class="nav nav-list">  
+                        <li><a href="index.html">Home</a></li>  
+                        <li class="active"><a href="profile.html">Profile</a></li>  
+                        <li><a href="http://webmail.daiict.ac.in">Webmail</a></li>
+                        <li><a href="filtration.html">Filtration</a></li> 
+                    </ul>   
+    			</div>	
+    		</div>
+
+    		<!--Body content-->
+    		<div class="span9 panel-box">
+
+    			<h2>Filtration</h2>
+	<div id="filer">
+	<form action="filterprocess.php" method="post">
+	<table style="width:100%;">
+
+	<tr>
+	<td style="border:1px solid silver;"><input type="checkbox" name="options[]" value="CPI"> CPI
+	<td>From:<td><input type="text" name="cpiF">
+ 	<td>To:<td><input type="text" name="cpiT">
+
+	<tr>
+	<td style="border:1px solid silver;"><input type="checkbox" name="options[]" value="elective"> Electives
+	<td colspan="4"><select name="elective[]" multiple size="5">
+	<option value="IT314"> Operating Systems </option>
+	<option value="2"> Introduction to Cryptography </option>
+	<option value="3"> 3 </option>
+	<option value="4"> 4 </option>
+	<option value="5"> 5 </option>
+	<option value="6"> 6 </option>
+	<option value="7"> 7 </option>
+	<option value="8"> 8 </option>
+	<option value="9"> 9 </option>
+	</select>
+	
+	<tr>
+	<td style="border:1px solid silver;"><input type="checkbox" name="options[]" value="program"> Program
+	<td><select name="program">
+	<option value="B.Tech"> B.Tech </option>
+	<option value="M.Tech"> M.Tech </option>
+	<option value="MSC-IT"> MSC-IT </option>
+	<option value="M.DES"> M.DES </option>
+	<option value="PHD"> PHD </option>
+	</select>
+	<td colspan="3">
+	<tr>
+	<td style="border:1px solid silver;"><input type="checkbox" name="options[]" value="batch"> batch
+	<td><select name="batch">
+	<option value="1"> 2013 </option>
+	<option value="2"> 2012 </option>
+	<option value="3"> 2011 </option>
+	<option value="4"> 2010 </option>
+	<option value="5"> 2009 </option>
+	<option value="5"> 2008 </option>
+	<option value="5"> 2007 </option>
+	</select>
+	<td colspan="3">
+
+	<tr>
+	<td style="border:1px solid silver;"><input type="checkbox" name="options[]" value="domain"> Domain
+	<td><input type="radio" name="domain" value="CS"> CS
+	<td><input type="radio" name="domain" value="ECE"> ECE
+	<td colspan="2">
+	<tr>
+	<td style="border:1px solid silver;"><input type="checkbox" name="options[]" value="gender"> Gender
+	<td><input type="radio" name="gender" value="male"> Male
+	<td><input type="radio" name="gender" value="female"> Female
+	<td colspan="2">
+	<tr>
+	<td style="border:1px solid silver;"><input type="checkbox" name="options[]" value="status"> Status
+	<td><input type="radio" name="status" value="placed"> Placed
+	<td><input type="radio" name="status" value="unplaced"> Unplaced
+	<td colspan="2">
+	<tr>
+	<td style="border:1px solid silver;"><input type="checkbox" name="options[]" value="stdX"> Std X %
+	<td>From:<td><input type="text" name="xpF">
+ 	<td>To:<td><input type="text" name="xpT">
+
+	<tr>
+	<td style="border:1px solid silver;"><input type="checkbox" name="options[]" value="stdXII"> Std XII %
+	<td>From:<td><input type="text" name="xiipF">
+ 	<td>To:<td><input type="text" name="xiipT">
+	
+	<tr>
+	</table>
+	<input class='button' type="submit">
+	</form>
+
+    		</div>
+  		</div>
+	</div>
+
+
+    <div id="edit_profile" class="modal hide fade in" style="display: none; ">  
+        <div class="modal-header">  
+            <a class="close" data-dismiss="modal">×</a>  
+            <h3>Edit Profile</h3>  
+        </div>  
+        <div class="modal-body">  
+            <form class="well">  
+                <label>Student ID</label>  
+                <input type="text" class="span3" placeholder="Type your nine digit ID">  
+                <span class="help-inline">Confirmation mail will be sent to this id!</span>
+                <label>Name</label>  
+                <input type="text" class="span3">
+                <label>Contact No</label>  
+                <input type="text" class="span3">
+                <p>Register for:</p>
+                <label class="checkbox">  
+                    <input type="checkbox"> Electronics  
+                </label>
+                <label class="checkbox">  
+                    <input type="checkbox"> IT 
+                </label>
+                <label class="checkbox">  
+                    <input type="checkbox"> Communication  
+                </label>  
+                <button type="submit" class="btn btn-success">Submit</button>
+                <button type="submit" class="btn">Submit</button>  
+            </form>               
+        </div>    
+    </div>  
+
+<!-- Le javascript
+================================================== -->
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>
+            
