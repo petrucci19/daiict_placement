@@ -74,7 +74,7 @@
 
     		<!--Body content-->
     		<div class="span9 panel-box">
-  			    <h2>Amazon</h2>
+  			    <h2 class="header-gap">Amazon</h2>
     			<div class="leaderboard">    
         			<div class="row-fluid">
         				<div class="span2">
@@ -89,7 +89,7 @@
 
                     <div class="row-fluid">
                         <button id="ask_question" class="btn btn-primary">Ask a Question</button>
-                        <button class="btn btn-success">Register</button>
+                        <button class="btn btn-success" style="margin-left:10px">Register</button>
 
                         <div id="question_box" class="row-fluid question-box" style="width:95%; display:none;">
                             <form>
@@ -100,60 +100,104 @@
 
                     </div>
                 </div> 
-                <hr />
+
+                <hr class="custom-hr" style="margin-top:25px; margin-bottom:10px;">
+                
                 <h4>2 Questions</h4>
+                <br>
 
                 <!-- 1st question -->
-                <div class="row-fluid">
-                    <div class="span1">
-                        <a href="#" class="thumbnail" style="margin-bottom:19px;">  
+                <div class="row-fluid question-panel-box">
+                    <div class="span2 question-panel-inner-lbox">
+                        <a href="#" class="thumbnail custom-ques-thumbnail">  
                             <img src="assets/img/user.png" alt="js tutorial" width="100%" >  
-                        </a>                    
+                        </a>
+                        <span><p class="user-info">First_Name</p></span>                    
                     </div> 
-                    <div class="span11">
+                    <div class="span10 question-panel-inner-rbox">
                         <p><strong>Question 1:</strong> What is the package?</p>
-                        <button class="btn">Reply</button>
-                        <hr />
-                        <h5>1 Reply</h5>
-                        <div class="row-fluid">
-                            <div class="span1">
-                                <a href="#" class="thumbnail" style="margin-bottom:19px;">  
-                                    <img src="assets/img/user.png" alt="js tutorial" width="100%" >  
-                                </a>                    
-                            </div> 
-                            <div class="span11">
-                                <p>No confirmation yet</p>
-                            </div>    
+                        
+                        <a id="replies-link--1" class="reply-link" >2 Replies</a>
+                        <p class="posted-info" >Posted on 3rd Apr 13</p>
+                
+                        <div id="replies-panel--1" class="replies-panel-outer-box" >
+                            <div class="row-fluid replies-panel-inner-box">
+                                <div class="span2">
+                                    <a href="#" class="thumbnail custom-reply-thumbnail">  
+                                        <img src="assets/img/user.png" alt="js tutorial" width="100%" >  
+                                    </a>
+                                    <span><p class="user-info" style="text-align:left">First_Name</p></span>                    
+                                </div> 
+                                <div class="span10 replies-panel-inner-rbox">
+                                    <p>No confirmation yet</p>
+                                    <p class="posted-info" style="margin-left:0" >Posted on 3rd Apr 13</p>
+                                </div>    
+                            </div>
+                            <hr class="custom-hr">
+                            <div class="row-fluid replies-panel-inner-box">
+                                <div class="span2">
+                                    <a href="#" class="thumbnail custom-reply-thumbnail">  
+                                        <img src="assets/img/user.png" alt="js tutorial" width="100%" >  
+                                    </a>
+                                    <span><p class="user-info" style="text-align:left">First_Name</p></span>                    
+                                </div> 
+                                <div class="span10 replies-panel-inner-rbox">
+                                    <p>Around 7.8lpa</p>
+                                    <p class="posted-info" style="margin-left:0">Posted on 3rd Apr 13</p>
+                                </div>    
+                            </div>
+                            <hr class="custom-hr">
+                            <div class="row-fluid replies-panel-inner-box">
+                                <form style="margin:0px">
+                                    <textarea required name='question' placeholder="Post a Reply" style="width:98%"></textarea>
+                                    <input type="submit" class="btn btn-small">
+                                </form>   
+                            </div>
+
                         </div>
                     </div>    
                 </div>
                 
-                <hr />
+                
                 <!-- 1st question ends -->
 
 
                 <!-- 2nd question -->
-                <div class="row-fluid">
-                    <div class="span1">
-                        <a href="#" class="thumbnail" style="margin-bottom:19px;">  
+                <div class="row-fluid question-panel-box">
+                    <div class="span2 question-panel-inner-lbox">
+                        <a href="#" class="thumbnail custom-ques-thumbnail">  
                             <img src="assets/img/user.png" alt="js tutorial" width="100%" >  
-                        </a>                    
+                        </a>
+                        <span><p class="user-info">First_Name</p></span>                    
                     </div> 
-                    <div class="span11">
+                    <div class="span10 question-panel-inner-rbox">
                         <p><strong>Question 2:</strong> What is the location?</p>
-                        <button class="btn">Reply</button>
-                        <hr />
-                        <h5>1 Reply</h5>
-                        <div class="row-fluid">
-                            <div class="span1">
-                                <a href="#" class="thumbnail" style="margin-bottom:19px;">  
-                                    <img src="assets/img/user.png" alt="js tutorial" width="100%" >  
-                                </a>                    
-                            </div> 
-                            <div class="span11">
-                                <p>No confirmation yet</p>
-                            </div>    
+                        
+                        <a id="replies-link--2" class="reply-link" >1 Reply</a>
+                        <p class="posted-info" >Posted on 3rd Apr 13</p>
+                
+                        <div id="replies-panel--2" class="replies-panel-outer-box" >
+                            <div class="row-fluid replies-panel-inner-box">
+                                <div class="span2">
+                                    <a href="#" class="thumbnail custom-reply-thumbnail">  
+                                        <img src="assets/img/user.png" alt="js tutorial" width="100%" >  
+                                    </a>
+                                    <span><p class="user-info" style="text-align:left">First_Name</p></span>                    
+                                </div> 
+                                <div class="span10 replies-panel-inner-rbox">
+                                    <p>Bangalore</p>
+                                    <p class="posted-info" style="margin-left:0" >Posted on 3rd Apr 13</p>
+                                </div>    
+                            </div>
+                            <hr class="custom-hr">
+                            <div class="row-fluid replies-panel-inner-box">
+                                <form style="margin:0px">
+                                    <textarea required name='question' placeholder="Post a Reply" style="width:98%"></textarea>
+                                    <input type="submit" class="btn btn-small">
+                                </form>   
+                            </div>
                         </div>
+                    
                     </div>    
                 </div>
     		</div>
@@ -167,7 +211,13 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $('#ask_question').click(function() {
-          $('#question_box').toggle();
+            $('#question_box').toggle();
+        });
+
+        $('.reply-link').click(function() {
+            var link_id = $(this).attr('id');
+            var reply_panel_id = "#replies-panel--" + link_id.split("--")[1];
+            $(reply_panel_id).toggle();
         });
     });
 </script>

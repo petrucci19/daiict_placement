@@ -14,6 +14,82 @@ body {
 	margin-bottom: 20px;
 }
 
+.question-panel-box {
+	box-sizing: border-box;
+	width: 98%;
+	border: 1px solid #ccc;
+	padding: 10px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	background: #f2f2f2;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	margin-bottom: 20px;
+}
+
+.question-panel-inner-rbox {
+	padding-bottom: 10px;
+}
+
+.replies-panel-inner-rbox {
+	margin-left: -10px !important;
+}
+
+
+.custom-ques-thumbnail {
+	width: 65%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.custom-reply-thumbnail {
+	width: 50%;
+	margin-left: 2px;
+	margin-right: auto;
+}
+
+.user-info {
+	margin: 0;
+	padding: 0;
+	font-size: 0.8em;
+	text-align: center;
+}
+
+.reply-link {
+	display: block;
+	float: left;
+	margin-bottom: 10px;
+	font-size: 0.8em;
+	cursor: pointer;
+}
+
+.posted-info {
+	float: left;
+	margin-left: 20px;
+	font-size: 0.8em;
+	color: rgb(0, 136, 204);
+}
+
+
+.replies-panel-outer-box {
+	clear: both;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	background: #fafafa;
+	font-size: 0.9em;
+	display: none;
+}
+
+.replies-panel-inner-box {
+	box-sizing: border-box;
+	padding: 10px;
+}
+
+.custom-hr{
+	margin:0px;
+	border-top: 1px dashed #dadada;
+}
+
 .sidebar-img {
 	width: 100%;
 	margin-left: auto;
@@ -59,8 +135,8 @@ body {
 
 #login_box {
 	width:300px;
-	height: 180px;
 	padding: 30px;
+	padding-bottom: 15px;
 	padding-top: 25px;
 	#background: #454545;
 	margin-left: auto;
@@ -89,5 +165,5 @@ body {
 }
 
 .login_body {
-	background: #1399bd;
+	background: #000;
 }

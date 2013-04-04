@@ -31,7 +31,7 @@
 					<tr>
 						<td>Password</td>
 						<td>
-							<input id="password" name="password" placeholder="Enter your password" type="password" pattern=".{5,}" title="Minmimum 5 letters or numbers." required>
+							<input id="password" name="password" placeholder="Enter your password" type="password" pattern=".{5,}" title="Minimum 5 letters or numbers." required>
 						</td>
 					</tr>
 				</table>
@@ -39,11 +39,28 @@
 				<input type="submit" class="btn btn-success">
 				<a href="studentReg.html" class="btn btn-primary" style="margin-left:20px">Register</a>
 			</form>
+			<button data-toggle="modal" href="#forgot_password" class="btn btn-link" style="margin-left:0; margin-top:0; padding:0">Forgot Password?</button>
 		</div>	    	
 	</div>
 
+    <div id="forgot_password" class="modal hide fade in" style="display: none; ">  
+        <div class="modal-header">  
+            <a class="close" data-dismiss="modal">×</a>  
+            <h4>Password Recovery</h4>  
+        </div>  
+        <div class="modal-body"> 
+            <p>Provide us with your email address so that we can help you in recovering your password.</p> 
+            <form class="well">          	
+                <input type="text" placeholder="Enter your email address" style="margin-top:10px">  
+                <button type="submit" class="btn btn-success">Submit</button>
+            </form>               
+        </div>    
+    </div>
+
 <!-- Le javascript
 ================================================== -->
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
 </body>
 </html>
             
