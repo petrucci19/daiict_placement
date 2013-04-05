@@ -32,18 +32,31 @@
 	                  	<li class="divider-vertical"></li>
 	                	<li><a href="index.html"><i class="icon-home icon-white"></i> Home</a></li>
 	              	</ul>
+
+	              	<div class="pull-right">
+	                	<ul class="nav pull-right">
+	                    	<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Administration<b class="caret"></b></a>
+	                        	<ul class="dropdown-menu">
+	                        		<li><a href="eventgeneration.html"><i class="icon-plus-sign"></i> Add Event</a></li>
+                        			<li><a href="filtration.html"><i class="icon-search"></i> Filtration</a></li>    
+                        			<li><a href="status.html"><i class="icon-bullhorn"></i> Status Update</a></li>
+	                        	</ul>
+	                    	</li>
+	                   	</ul>
+	                </div>
+	                	
 	              	<div class="pull-right">
 	                	<ul class="nav pull-right">
 	                    	<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome, User <b class="caret"></b></a>
 	                        	<ul class="dropdown-menu">
-	                            	<li><a href="#"><i class="icon-cog"></i> Preferences</a></li>
-	                            	<li><a href="#"><i class="icon-envelope"></i> Contact Support</a></li>
+	                            	<li><a href="editProfile.html"><i class=" icon-cog"></i> Edit Profile</a></li>
+	                            	<li><a data-toggle="modal" href="#change_password"><i class="icon-pencil"></i> Change Password</a></li>
 	                            	<li class="divider"></li>
 	                            	<li><a href="login.html"><i class="icon-off"></i> Logout</a></li>
 	                        	</ul>
 	                    	</li>
 	                	</ul>
-	              </div>
+	              	</div>
 	            </div>
 	        </div>
 	    </div>
@@ -55,7 +68,7 @@
     		<!--Sidebar content-->
     		<div class="span3 sidebar-box">
     			<div class="well sidebar-nav custom-well">
-    				<img src="assets/img/daiict.jpg" class="img-rounded sidebar-img" >
+    				<img src="assets/img/daiict.png" class="img-rounded sidebar-img" >
 
     			    <ul class="nav nav-list">  
                         <li><a href="index.html">Home</a></li>
@@ -63,12 +76,7 @@
                         <li><a href="profile.html">Profile</a></li>  
                         <li><a href="http://webmail.daiict.ac.in">Webmail</a></li>
                     </ul>
-                    <h4 class="nav-custom-header">Administration</h4>
-                    <ul class="nav nav-list">  
-                        <li><a href="eventgeneration.html">Add Event</a></li>
-                        <li class="active"><a href="filtration.html">Filtration</a></li>    
-                        <li><a href="status.html">Status Update</a></li>                  
-                    </ul>
+                    
     			</div>	
     		</div>
 
@@ -112,6 +120,8 @@
     		</div>
     	</div>		
 	</div>
+
+
 
 	<!-- MODAL WINDOW CONTAINING FORM -->
 	<div id="add_filters" class="modal hide fade in" style="display: none; width:700px;">  
@@ -205,6 +215,32 @@
 			</form>              
         </div>    
     </div> 
+
+    <div id="change_password" class="modal hide fade in" style="display: none; ">  
+        <div class="modal-header">  
+            <a class="close custom-close" data-dismiss="modal">×</a>  
+            <h4>Change Password</h4>  
+        </div>  
+        <div class="modal-body">  
+            <form class="well">
+            	<table>          	
+                	<tr>
+                		<td >Old Password</td>
+                		<td><input type="password"></td>
+                	</tr>
+                	<tr>
+                		<td >New Password</td>
+                		<td><input type="password"></td>
+                	</tr>
+                	<tr>
+                		<td >Confirm New Password</td>
+                		<td><input type="password"></td>
+                	</tr>
+                <table>  
+                <button type="submit" class="btn btn-success">Change Password</button>
+            </form>               
+        </div>    
+    </div>
 
 <!-- Le javascript
 ================================================== -->
