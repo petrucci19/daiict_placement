@@ -81,8 +81,8 @@
             </div>
 
     		<!--Body content-->
-    		<div class="span9 panel-box">
-                <a data-toggle="modal" href="#confirm_delete" class="close custom-close" style="margin-top:30px; margin-right:20px;">×</a>
+    		<div id="event--1" class="span9 panel-box">
+                <a id="del__event__event--1" data-toggle="modal" href="#confirm_delete" class="close custom-close" style="margin-top:30px; margin-right:20px;">×</a>
   			    <h2 class="header-gap">Amazon</h2>
     			<div class="leaderboard">    
         			<div class="row-fluid">
@@ -117,7 +117,7 @@
                 <br>
 
                 <!-- 1st question -->
-                <div class="row-fluid question-panel-box">
+                <div id="ques--1" class="row-fluid question-panel-box">
 
                     <div class="span2 question-panel-inner-lbox">
                         <a href="#" class="thumbnail custom-ques-thumbnail">  
@@ -126,7 +126,7 @@
                         <span><p class="user-info">First_Name</p></span>                    
                     </div> 
                     <div class="span10 question-panel-inner-rbox">
-                        <a data-toggle="modal" href="#confirm_delete" class="close custom-close">×</a>
+                        <a id="del__ques__ques--1" data-toggle="modal" href="#confirm_delete" class="close custom-close">×</a>
                         <p><strong>Question 1:</strong> What is the package?</p>
                         
                         <a id="replies-link--1" class="reply-link" >2 Replies</a>
@@ -134,7 +134,7 @@
                 
                         <div id="replies-panel--1" class="replies-panel-outer-box" >
 
-                            <div class="row-fluid replies-panel-inner-box">
+                            <div id="repbox_ques-1_reply-1" class="row-fluid replies-panel-inner-box">
                                 
                                 <div class="span2">
                                     <a href="#" class="thumbnail custom-reply-thumbnail">  
@@ -143,13 +143,13 @@
                                     <span><p class="user-info" style="text-align:left">First_Name</p></span>                    
                                 </div> 
                                 <div class="span10 replies-panel-inner-rbox">
-                                    <a data-toggle="modal" href="#confirm_delete" class="close custom-close">×</a>
+                                    <a id="del__reply__repbox_ques-1_reply-1" data-toggle="modal" href="#confirm_delete" class="close custom-close">×</a>
                                     <p>No confirmation yet</p>
                                     <p class="posted-info" style="margin-left:0" >Posted on 3rd Apr 13</p>
                                 </div>    
                             </div>
                             <hr class="custom-hr">
-                            <div class="row-fluid replies-panel-inner-box">
+                            <div id="repbox_ques-1_reply-2" class="row-fluid replies-panel-inner-box">
                                 
                                 <div class="span2">
                                     <a href="#" class="thumbnail custom-reply-thumbnail">  
@@ -158,7 +158,7 @@
                                     <span><p class="user-info" style="text-align:left">First_Name</p></span>                    
                                 </div> 
                                 <div class="span10 replies-panel-inner-rbox">
-                                    <a data-toggle="modal" href="#confirm_delete" class="close custom-close">×</a>
+                                    <a id="del__reply__repbox_ques-1_reply-2" data-toggle="modal" href="#confirm_delete" class="close custom-close">×</a>
                                     <p>Around 7.8lpa</p>
                                     <p class="posted-info" style="margin-left:0">Posted on 3rd Apr 13</p>
                                 </div>    
@@ -180,7 +180,7 @@
 
 
                 <!-- 2nd question -->
-                <div class="row-fluid question-panel-box">
+                <div id="ques--2" class="row-fluid question-panel-box">
                     
                     <div class="span2 question-panel-inner-lbox">
                         <a href="#" class="thumbnail custom-ques-thumbnail">  
@@ -189,14 +189,14 @@
                         <span><p class="user-info">First_Name</p></span>                    
                     </div> 
                     <div class="span10 question-panel-inner-rbox">
-                        <a data-toggle="modal" href="#confirm_delete" class="close custom-close">×</a>
+                        <a id="del__reply__ques--2" data-toggle="modal" href="#confirm_delete" class="close custom-close">×</a>
                         <p><strong>Question 2:</strong> What is the location?</p>
                         
                         <a id="replies-link--2" class="reply-link" >1 Reply</a>
                         <p class="posted-info" >Posted on 3rd Apr 13</p>
                 
                         <div id="replies-panel--2" class="replies-panel-outer-box" >
-                            <div class="row-fluid replies-panel-inner-box">                               
+                            <div id="repbox_ques-2_reply-1" class="row-fluid replies-panel-inner-box">                               
                                 <div class="span2">
                                     <a href="#" class="thumbnail custom-reply-thumbnail">  
                                         <img src="assets/img/user.png" alt="js tutorial" width="100%" >  
@@ -204,7 +204,7 @@
                                     <span><p class="user-info" style="text-align:left">First_Name</p></span>                    
                                 </div> 
                                 <div class="span10 replies-panel-inner-rbox">
-                                    <a class="close custom-close">×</a>
+                                    <a id="del__reply__repbox_ques-2_reply-1" class="close custom-close data-toggle="modal" href="#confirm_delete"">×</a>
                                     <p>Bangalore</p>
                                     <p class="posted-info" style="margin-left:0" >Posted on 3rd Apr 13</p>
                                 </div>    
@@ -230,7 +230,7 @@
             <h4>Are you sure you want to delete?</h4>  
         </div>  
         <div class="modal-body">               
-            <button class="btn btn-danger">Confirm</button>
+            <button class="btn btn-danger confirm-delete" data-dismiss="modal">Confirm</button>
             <button class="btn btn-success" data-dismiss="modal">Cancel</button>               
         </div>    
     </div>
@@ -269,6 +269,7 @@
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script type="text/javascript">
+    var delete_id=0, delete_obj;
     $(document).ready(function(){
         $('#ask_question').click(function() {
             $('#question_box').toggle();
@@ -278,6 +279,22 @@
             var link_id = $(this).attr('id');
             var reply_panel_id = "#replies-panel--" + link_id.split("--")[1];
             $(reply_panel_id).toggle();
+        });
+
+        $('.custom-close').click(function() {
+            console.log($(this).attr('id'));
+            delete_obj = $(this).attr('id').split("__")[1];
+            delete_id = $(this).attr('id').split("__")[2];
+            console.log(delete_id);
+        });
+
+        $('.confirm-delete').click(function() {
+            $("#"+delete_id).remove();
+            delete_id = 0;
+            if(delete_obj==="event") {
+                $(".row-fluid").append("<div class=\'span9 panel-box\'><p><br>Event deleted.<br>Redirecting you to homepage.</p></div>");
+                setTimeout(function(){window.location.replace("index.html");}, 3000);
+            }
         });
 
     });
